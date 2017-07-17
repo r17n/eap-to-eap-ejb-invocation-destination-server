@@ -1,9 +1,9 @@
-ejb-remote-instance: Remote EJB Invocation from Separate Instance Example
+eap-to-eap-ejb-invocation: Remote EJB Invocation from Separate Instance Example
 =====================================
 Author: Red Hat Consulting  
 Level: Intermediate  
 Technologies: EJB
-Summary: The `ejb-remote-instance` quickstart uses *EJB* to demonstrate how to access an EJB, deployed to JBoss EAP, from a remote EAP instance.
+Summary: The `eap-to-eap-ejb-invocation` quickstart uses *EJB* to demonstrate how to access an EJB, deployed to JBoss EAP, from a remote EAP instance.
 Target Product: JBoss EAP  
 
 System requirements
@@ -16,7 +16,7 @@ All you need to build this project is Java 8.0 (Java SDK 1.8) or later and Maven
 What is it?
 -----------
 
-The purpose of this `ejb-remote-instance` quickstart is to demonstrate how to lookup and invoke on EJBs deployed on an EAP7 server instance from another EAP7 server instance. This is different from invoking the EJBs from a remote standalone client
+The purpose of this `eap-to-eap-ejb-invocation` quickstart is to demonstrate how to lookup and invoke EJBs deployed on an EAP7 server instance from another EAP7 server instance. This is different from invoking the EJBs from a remote standalone client
 
 Let's call the server, from which the invocation happens to the EJB, as "Client Server" and the server on which the bean is deployed as the "Destination Server".
 

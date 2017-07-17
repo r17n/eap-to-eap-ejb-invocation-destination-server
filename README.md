@@ -205,13 +205,13 @@ Create a outbound-socket-binding on the "Client Server"
 
 Let's first create a outbound-socket-binding which points the "Destination Server"'s host and port. We'll use the CLI to create this configuration:
 
-    /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb:add(host=localhost, port=4447)
-The above command will create a outbound-socket-binding named "remote-ejb" (we can name it anything) which points to "localhost" as the host and port 4447 as the destination port. Note that the host information should match the host/IP of the "Destination Server" (in this example we are running on the same machine so we use "localhost") and  the port information should match the remoting connector port used by the EJB subsystem (by default it's 4447). When this command is run successfully, we'll see that the standalone-full.xml (the file which we used to start the server) was updated with the following outbound-socket-binding in the socket-binding-group:
+    /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb:add(host=localhost, port=8080)
+The above command will create a outbound-socket-binding named "remote-ejb" (we can name it anything) which points to "localhost" as the host and port 8080 as the destination port. Note that the host information should match the host/IP of the "Destination Server" (in this example we are running on the same machine so we use "localhost") and  the port information should match the remoting connector port used by the EJB subsystem (by default it's 8080). When this command is run successfully, we'll see that the standalone-full.xml (the file which we used to start the server) was updated with the following outbound-socket-binding in the socket-binding-group:
 
     <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
             ...
             <outbound-socket-binding name="remote-ejb">
-                <remote-destination host="localhost" port="4447"/>
+                <remote-destination host="localhost" port="8080"/>
             </outbound-socket-binding>
         </socket-binding-group>
 
